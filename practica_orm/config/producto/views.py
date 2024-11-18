@@ -90,7 +90,7 @@ def registro(request):
             messages.success(request, 'Cuenta creada exitosamente. Ahora puedes iniciar sesión.')
             return redirect('login')  # Redirige al login después del registro
         else:
-            messages.error(request, 'Corrige los errores en el formulario.')  # Mensaje general
+            return render(request, 'registro.html', {'form': form}) 
     else:
         form = UserCreationForm()
     return render(request, 'registro.html', {'form': form})  # Pasar errores del formulario a la plantilla
