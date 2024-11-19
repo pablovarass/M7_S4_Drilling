@@ -17,7 +17,7 @@
                     <a class="nav-link" href="{% url 'index' %}">Inicio</a>
                 </li>
                 {% if user.is_authenticated %}
-                    {% if perms.vehiculo.add_producto %}
+                    {% if perms.producto.add_producto %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'crear' %}">Agregar</a>
                         </li>
